@@ -2,6 +2,7 @@ package io.github.dougkeller.minecompress;
 
 import com.google.inject.Inject;
 import org.slf4j.Logger;
+import org.spongepowered.api.Sponge;
 import org.spongepowered.api.event.Listener;
 import org.spongepowered.api.event.game.state.GameStartedServerEvent;
 import org.spongepowered.api.plugin.Plugin;
@@ -21,6 +22,12 @@ public class Minecompress {
 
     @Listener
     public void onServerStart(GameStartedServerEvent event) {
+        logger.info("MineCompress started.");
+        Sponge.getEventManager().registerListeners(this, new ItemPickupListener(this));
+    }
+
+    public Logger getLogger() {
+        return logger;
     }
 }
 
