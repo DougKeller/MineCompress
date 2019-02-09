@@ -10,7 +10,6 @@ import org.spongepowered.api.plugin.Plugin;
         id = "minecompress",
         name = "MineCompress",
         description = "Automatically compresses resources you collect as you mine to save space.",
-        url = "www.doug-keller.com",
         authors = {
                 "DougKeller"
         }
@@ -24,3 +23,4 @@ public class Minecompress {
     public void onServerStart(GameStartedServerEvent event) {
     }
 }
+
