@@ -23,7 +23,7 @@ public class Minecompress {
     @Listener
     public void onServerStart(GameStartedServerEvent event) {
         logger.info("MineCompress started.");
-        Sponge.getEventManager().registerListeners(this, new ItemPickupListener(this));
+        Sponge.getEventManager().registerListeners(this, new ItemPickupListener());
     }
 
     public Logger getLogger() {
