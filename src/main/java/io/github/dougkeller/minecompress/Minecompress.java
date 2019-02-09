@@ -16,18 +16,16 @@ import org.spongepowered.api.plugin.Plugin;
         }
 )
 public class Minecompress {
+    public static Logger logger;
 
     @Inject
-    private Logger logger;
+    public Minecompress(Logger logger) {
+        Minecompress.logger = logger;
+    }
 
     @Listener
     public void onServerStart(GameStartedServerEvent event) {
-        logger.info("MineCompress started.");
         Sponge.getEventManager().registerListeners(this, new ItemPickupListener());
-    }
-
-    public Logger getLogger() {
-        return logger;
     }
 }
 
