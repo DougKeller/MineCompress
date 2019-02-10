@@ -17,10 +17,12 @@ import org.spongepowered.api.plugin.Plugin;
 )
 public class Minecompress {
     public static Logger logger;
+    public static Object plugin;
 
     @Inject
     public Minecompress(Logger logger) {
         Minecompress.logger = logger;
+        Minecompress.plugin = this;
     }
 
     @Listener
